@@ -86,7 +86,7 @@ const submitForm = async () => {
     await fetchCsrfToken();
 
     if (!form.value.accept) {
-      alert('Proszę zaakceptować politykę prywatności.');
+      toast.add({ severity: 'error', summary: 'Błąd', detail: 'Proszę zaakceptować polityke prywatności.', life: 3000 });
       return;
     }
 
@@ -94,9 +94,8 @@ const submitForm = async () => {
       withCredentials: true
     });
 
-    toast.add({ severity: 'success', summary: 'Sukces', detail: response.data.message, life: 3000 });
+    toast.add({ severity: 'success', summary: 'Poprawnie wysłano maila!', detail: response.data.message, life: 3000 });
   } catch (error) {
-    console.error('Błąd przy wysyłaniu formularza:', error);
     toast.add({ severity: 'error', summary: 'Błąd', detail: 'Wystąpił błąd przy wysyłaniu formularza.', life: 3000 });
   }
 };

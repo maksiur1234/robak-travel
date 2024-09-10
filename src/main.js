@@ -26,7 +26,7 @@ import TriStateCheckbox from 'primevue/tristatecheckbox';
 import Checkbox from 'primevue/checkbox';
 import Carousel from 'primevue/carousel';
 import Tag from 'primevue/tag';
-
+import Dialog from 'primevue/dialog';
 
 import 'primevue/resources/themes/aura-light-amber/theme.css';
 import 'primevue/resources/primevue.min.css';
@@ -61,4 +61,5 @@ app.component('TriStateCheckbox', TriStateCheckbox);
 app.component('Checkbox', Checkbox);
 app.component('Carousel', Carousel);
 app.component('Tag', Tag);
+app.component('Dialog', Dialog);
 app.mount('#app');
